@@ -57,7 +57,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :production do
    gem "pg", "~> 1.4"
 end
