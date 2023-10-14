@@ -1,0 +1,16 @@
+<%= form_for @tweet do |f| %>
+  <div class="field">
+    <%= f.label :歌手 %>
+    <%= f.text_field :singer, :size => 30 %>
+  </div> 
+  <div class ="field">
+    <%= f.label :曲 %>
+    <%= f.text_field :song, :size => 30 %>
+  </div>
+  <div class="field">
+    <%= f.label :詳細 %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>

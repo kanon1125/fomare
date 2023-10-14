@@ -1,0 +1,31 @@
+<%= form_for @tweet do |f| %>
+  <div class='form-group'>
+        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+            <div class='form-check'>
+                <%= tag.label class: 'form-check-label' do %>
+                    <%= tag.check_box class: 'form-check-input' %>
+                    <%= tag.text %>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+  <div class="field">
+    <%= f.label :歌手 %>
+    <%= f.text_field :singer, :size => 30 %>
+  </div> 
+  <div class ="field">
+    <%= f.label :曲 %>
+    <%= f.text_field :song, :size => 30 %>
+  </div>
+  <div class="field">
+    <%= f.label :詳細 %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :youtube_url %>
+    <%= f.text_field :youtube_url, :size => 140 %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
